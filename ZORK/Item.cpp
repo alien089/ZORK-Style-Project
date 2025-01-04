@@ -1,6 +1,6 @@
 #include "Item.h"
 
-Item::Item(std::string description, int value)
+Item::Item(const std::string& description, int value)
 {
     this->_description = description;
     this->_value = value;

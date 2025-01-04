@@ -4,11 +4,12 @@
 class Map
 {
 private:
-    Room *_Map[][];
-    Room *_CurrentRoom;
+    std::vector<std::vector<Room>> _map;
+    Room *_currentRoom;
     
 public:
     Map();
-    Room *GetCurrentRoom() const;
-    void SetCurrentRoom(int coord[2]);
+    ~Map();
+    Room* GetCurrentRoom() const;
+    void SetCurrentRoom(std::array<int, 2> coord);
 };

@@ -17,7 +17,7 @@ public:
     ~Room();
     std::string GetDescription();
     Item* GetItem(int index);
-    std::array<int, 2> GetPositions();
+    std::array<int, 2> GetPositions() const;
     void AddItem(Item &item);
     void RemoveItem(Item &item);
 };

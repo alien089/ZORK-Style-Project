@@ -7,12 +7,14 @@ Room::Room(const std::string &description, std::vector<Item>  &items, std::array
     this->_position = position;
 }
 
+Room::~Room() = default;
+
 std::string Room::GetDescription(){return this->_description;}
 
 //ritorno il riferimento dell'oggetto richiesto da indice
 Item* Room::GetItem(int index){return &_items[index];}
 
-std::array<int, 2> Room::GetPositions(){return this->_position;}
+std::array<int, 2> Room::GetPositions() const {return this->_position;}
 
 //aggiungo alla stanza un nuovo oggetto
 void Room::AddItem(Item& item){_items.push_back(item);}
