@@ -4,8 +4,8 @@
 class Map
 {
 private:
-    std::vector<std::vector<Room>> _map;
-    Room *_currentRoom;
+    std::vector<std::vector<Room*>> _map;
+    Room* _currentRoom;
     
 public:
     Map();

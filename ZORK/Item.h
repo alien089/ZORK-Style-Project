@@ -3,7 +3,7 @@
 
 class Item
 {
-private:
+public:
     std::string _description;
     int _value;
 public:

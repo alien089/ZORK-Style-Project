@@ -3,21 +3,19 @@
 #include <string>
 #include <vector>
 
+#include "Inventory.h"
 #include "Item.h"
 
 class Room
 {
-private:
+public:
     std::string _description;
-    std::vector<Item> _items;     
+    Inventory* _inventory;    
     std::array<int, 2> _position;
     
 public:
-    Room(const std::string &description, std::vector<Item> &items, std::array<int, 2> position);
+    Room(const std::string &description, Inventory *inventory, std::array<int, 2> position);
     ~Room();
     std::string GetDescription();
-    Item* GetItem(int index);
     std::array<int, 2> GetPositions() const;
-    void AddItem(Item &item);
-    void RemoveItem(Item &item);
 };

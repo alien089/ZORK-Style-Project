@@ -1,6 +1,9 @@
 #include "Inventory.h"
 
-Inventory::Inventory() = default;
+Inventory::Inventory()
+{
+    _items = std::vector<Item>();
+}
 
 Inventory::~Inventory() = default;
 
@@ -22,3 +25,5 @@ void Inventory::RemoveItem(const Item &item)
         }
     }
 }
+
+Item* Inventory::GetItem(int index){return &_items[index];}

@@ -13,4 +13,5 @@ public:
     std::vector<Item> GetItems() const;
     void AddItem(const Item &item);
     void RemoveItem(const Item &item);
+    Item* GetItem(int index);
 };
